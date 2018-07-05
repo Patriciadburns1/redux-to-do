@@ -1,14 +1,14 @@
-# React Starter
+# Redux To Do App 
 
-> This repo contains boilerplate code to aid in the creation of a new React app with Redux. Follow the below setup instructions to get started.
+> To Do List app built utilizing ReastJS and ReduxJS 
 
 ### Setup Instructions
 
 > 1. Fork this repo
 > 1. Clone your forked copy of this repo
->    - `git clone https://github.com/[Your Username]/react_starter.git`
+>    - `git clone https://github.com/[Your Username]/redux-to-do.git`
 > 1. Change directory into the newly cloned repo
->    - `cd react_starter`
+>    - `cd redux-to-do`
 > 1. Install dependencies 
 >    - `npm install`
 > 1. Start dev server
