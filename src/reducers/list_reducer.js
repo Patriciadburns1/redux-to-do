@@ -4,7 +4,8 @@
 import types from '../actions/types'; 
 
 const DEFAULT_STATE = {
-    all: []
+    all: [], 
+    single: {}
 }
 
 // two parameters - state , then takes in action - es6 default parameters ( if state is null use DEFAULT_STATE)
@@ -15,10 +16,14 @@ export default ( state=DEFAULT_STATE, action )=>{
 // switch statement goes into reducer - decision is made from action.type 
     switch(action.type){
         case types.GET_LIST_DATA:
-            console.log("get list data", action);
+            // console.log("get list data", action);
             return {...state, all: action.payload.data.todos}; 
+        
+        case types.VIEW_ITEM:
+            // console.log("view item action", action);
+            return {...state, single: action.payload.data.todo}
         default:
-        return state; 
+            return state; 
     }
 }
 
