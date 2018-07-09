@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux'; 
 import {createStore, applyMiddleware} from 'redux'; 
 import rootReducer from './reducers'; 
+// replace reduxPromise make it ourselves
 import reduxPromise from 'redux-promise'; 
 import {BrowserRouter as Router} from 'react-router-dom'; 
-
+import logger from './middleware/logger'; 
+import promise from './middleware/promise'; 
 import App from './components/app';
 
-const store = createStore(rootReducer, {}, applyMiddleware(reduxPromise)); 
+
+const store = createStore(rootReducer, {}, applyMiddleware(logger, promise)); 
 
 ReactDOM.render(
     <Provider store={store}>
